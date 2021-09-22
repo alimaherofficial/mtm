@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "718490472215",
+    "project_id": "mtmfire",
+    "storage_bucket": "mtmfire.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718490472215:android:963c527784ebabad387152",
+        "android_client_info": {
+          "package_name": "com.mtmfire.mtm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718490472215-3lch88ofvl95kgl8pciu7rvli1146ebn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mtmfire.mtm",
+            "certificate_hash": "5156c39f13e5c69bf707e0d4e09cc7ce94cd4834"
+          }
+        },
+        {
+          "client_id": "718490472215-sm2isl94has032cnts2rdbekl1geee40.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7Vy5SfLWLwkAiMkNcrF-XwD_YtfxAaEc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718490472215-sm2isl94has032cnts2rdbekl1geee40.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

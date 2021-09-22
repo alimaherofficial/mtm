@@ -5,6 +5,7 @@ import 'package:mtm/layout/mtm_layout.dart';
 import 'package:mtm/shared/bloc_observer.dart';
 import 'dart:async';
 
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();

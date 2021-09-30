@@ -1,7 +1,6 @@
-// // import 'package:firebase_download_example/api/firebase_api.dart';
-// // import 'package:firebase_download_example/model/firebase_file.dart';
+// import 'package:firebase_download_example/api/firebase_api.dart';
+// import 'package:firebase_download_example/model/firebase_file.dart';
 // import 'package:flutter/material.dart';
-// // ignore: unused_import
 // import 'package:mtm/shared/cubit/cubit.dart';
 
 // import '../firebase_file.dart';
@@ -29,23 +28,23 @@
 //           style: const TextStyle(color: Colors.black),
 //         ),
 //         centerTitle: true,
-//         // actions: [
-//         //   IconButton(
-//         //     icon: const Icon(
-//         //       Icons.file_download,
-//         //       color: Colors.black,
-//         //     ),
-//         //     onPressed: () async {
-//         //       //await MtmCubit.downloadFile(file.ref);
+//         actions: [
+//           IconButton(
+//             icon: const Icon(
+//               Icons.file_download,
+//               color: Colors.black,
+//             ),
+//             onPressed: () async {
+//               //await MtmCubit.downloadFile(file.ref);
 
-//         //       final snackBar = SnackBar(
-//         //         content: Text('Downloaded ${file.name}'),
-//         //       );
-//         //       ScaffoldMessenger.of(context).showSnackBar(snackBar);
-//         //     },
-//         //   ),
-//         //   const SizedBox(width: 12),
-//         // ],
+//               final snackBar = SnackBar(
+//                 content: Text('Downloaded ${file.name}'),
+//               );
+//               ScaffoldMessenger.of(context).showSnackBar(snackBar);
+//             },
+//           ),
+//           const SizedBox(width: 12),
+//         ],
 //       ),
 //       body: isImage
 //           ? Image.network(

@@ -79,24 +79,63 @@ class AboutUsScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/ahli.png',
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/ahli.png',
+                        ),
+                        const Text(
+                          'البنك الاهلى المصري',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/arab-contractors.png',
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/arab-contractors.png',
+                        ),
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        const Text(
+                          'المقاولون العرب',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/CPC.png',
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 20.0,
+                        ),
+                        Image.asset(
+                          'assets/images/CPC.png',
+                        ),
+                        const SizedBox(
+                          height: 38.0,
+                        ),
+                        const Text(
+                          'شركة التعاون للبترول',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -107,24 +146,66 @@ class AboutUsScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/egyptair.png',
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/egyptair.png',
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        const Text(
+                          'مصر للطيران',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/Movenpick.png',
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 13,
+                        ),
+                        Image.asset(
+                          'assets/images/Movenpick.png',
+                        ),
+                        const SizedBox(
+                          height: 10.0,
+                        ),
+                        const Text(
+                          'فندق موفنبيك',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/ramada.png',
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/ramada.png',
+                        ),
+                        const Text(
+                          'فندق رمادا',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 25.0,
+                        ),
+                      ],
                     ),
                   ),
                 ],
@@ -132,17 +213,46 @@ class AboutUsScreen extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/water.png',
+                    child: Column(
+                      children: [
+                        const SizedBox(
+                          height: 30.0,
+                        ),
+                        Image.asset(
+                          'assets/images/water.png',
+                        ),
+                        const SizedBox(
+                          height: 40.0,
+                        ),
+                        const Text(
+                          'الشركة القابضة لمياة الشرب و الصرف الصحي',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(
                     width: 7.0,
                   ),
                   Expanded(
-                    child: Image.asset(
-                      'assets/images/we.png',
+                    child: Column(
+                      children: [
+                        Image.asset(
+                          'assets/images/we.png',
+                        ),
+                        const Text(
+                          'المصرية للاتصالات',
+                          style: TextStyle(
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ],
                     ),
+                  ),
+                  Expanded(
+                    child: Container(),
                   ),
                 ],
               ),

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:mtm/models/model.dart';
 import 'package:mtm/models/our_work.dart';
 import 'package:mtm/page/image_page.dart';
+import 'package:mtm/page/our_works_des_page.dart';
 
 Widget buildFile(
   UserModel a,
@@ -24,8 +25,8 @@ Widget buildFile(
       child: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Material(
-          elevation: 5,
-          shadowColor: Colors.red,
+          elevation: 2.0,
+          shadowColor: Colors.black,
           color: Colors.white,
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           child: Row(
@@ -94,27 +95,41 @@ Widget buildwork(
         child: Row(
           children: [
             Expanded(
-              child: Material(
-                elevation: 5.0,
-                shadowColor: Colors.black,
-                borderRadius: BorderRadius.circular(20.0),
-                child: Column(
-                  children: [
-                    Image(
-                      image: NetworkImage('${w.imageurl1}'),
-                      fit: BoxFit.contain,
-                      width: double.infinity,
-                      height: 140,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        '${w.name1}',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    contextx,
+                    MaterialPageRoute(
+                      builder: (context) => OnTapOurWork(
+                        url: '${w.imageurl1}',
+                        name: w.name1,
+                        des: w.description1,
                       ),
                     ),
-                  ],
+                  );
+                },
+                child: Material(
+                  elevation: 5.0,
+                  shadowColor: Colors.black,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Column(
+                    children: [
+                      Image(
+                        image: NetworkImage('${w.imageurl1}'),
+                        fit: BoxFit.contain,
+                        width: double.infinity,
+                        height: 140,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          '${w.name1}',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
@@ -122,27 +137,41 @@ Widget buildwork(
               width: 10,
             ),
             Expanded(
-              child: Material(
-                shadowColor: Colors.black,
-                elevation: 5.0,
-                borderRadius: BorderRadius.circular(20.0),
-                child: Column(
-                  children: [
-                    Image(
-                      image: NetworkImage('${w.imageurl2}'),
-                      fit: BoxFit.contain,
-                      width: double.infinity,
-                      height: 140,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        '${w.name2}',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
+              child: InkWell(
+                onTap: () {
+                  Navigator.push(
+                    contextx,
+                    MaterialPageRoute(
+                      builder: (context) => OnTapOurWork(
+                        url: '${w.imageurl2}',
+                        name: w.name2,
+                        des: w.description2,
                       ),
                     ),
-                  ],
+                  );
+                },
+                child: Material(
+                  shadowColor: Colors.black,
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.circular(20.0),
+                  child: Column(
+                    children: [
+                      Image(
+                        image: NetworkImage('${w.imageurl2}'),
+                        fit: BoxFit.contain,
+                        width: double.infinity,
+                        height: 140,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          '${w.name2}',
+                          overflow: TextOverflow.ellipsis,
+                          maxLines: 1,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

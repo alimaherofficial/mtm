@@ -63,16 +63,17 @@
 //   }
 // }
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class OnTap extends StatelessWidget {
+class OnTapOurWork extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final url;
   // ignore: prefer_typing_uninitialized_variables
   final name;
   // ignore: prefer_typing_uninitialized_variables
   final des;
-  const OnTap(
+  const OnTapOurWork(
       {Key? key, required this.url, required this.name, required this.des})
       : super(key: key);
 
@@ -112,7 +113,7 @@ class OnTap extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(
-                  height: 15.0,
+                  height: 15,
                 ),
                 Text(
                   '$name',

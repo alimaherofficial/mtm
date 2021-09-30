@@ -57,7 +57,7 @@ Widget buildFile(
                           '${a.name}',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 15,
+                            fontSize: 18,
                           ),
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
@@ -66,6 +66,7 @@ Widget buildFile(
                       Text(
                         '${a.description}',
                         style: const TextStyle(
+                          fontSize: 10,
                           color: Colors.grey,
                         ),
                         maxLines: 2,
@@ -95,13 +96,13 @@ Widget buildwork(
             Expanded(
               child: Material(
                 elevation: 5.0,
-                shadowColor: Colors.red,
+                shadowColor: Colors.black,
                 borderRadius: BorderRadius.circular(20.0),
                 child: Column(
                   children: [
                     Image(
                       image: NetworkImage('${w.imageurl1}'),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                       width: double.infinity,
                       height: 140,
                     ),
@@ -118,18 +119,18 @@ Widget buildwork(
               ),
             ),
             const SizedBox(
-              width: 20,
+              width: 10,
             ),
             Expanded(
               child: Material(
-                shadowColor: Colors.red,
+                shadowColor: Colors.black,
                 elevation: 5.0,
                 borderRadius: BorderRadius.circular(20.0),
                 child: Column(
                   children: [
                     Image(
                       image: NetworkImage('${w.imageurl2}'),
-                      fit: BoxFit.cover,
+                      fit: BoxFit.contain,
                       width: double.infinity,
                       height: 140,
                     ),

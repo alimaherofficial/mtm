@@ -19,24 +19,23 @@ class MtmCubit extends Cubit<MtmStates> {
   List<BottomNavigationBarItem> bottomItems = [
     const BottomNavigationBarItem(
       icon: Icon(Icons.people_sharp),
-      label: 'About Us',
+      label: 'من نحن',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.assignment_turned_in_sharp),
-      label: 'Certificates',
+      label: 'الشهادات',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.work),
-      label: 'Our Works',
+      label: 'أعمالنا',
     ),
     const BottomNavigationBarItem(
       icon: Icon(Icons.fire_extinguisher_outlined),
-      label: 'Products',
+      label: 'المنتجات',
     ),
   ];
 
   List<Widget> screens = [
-    //const ProductsScreen(),
     const AboutUsScreen(),
     const CertificatesScreen(),
     const OurWorksScreen(),

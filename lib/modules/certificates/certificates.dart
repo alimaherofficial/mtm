@@ -6,50 +6,18 @@ class CertificatesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(20.0),
-      child: Column(
+      padding: const EdgeInsets.all(8.0),
+      child: ListView(
+        physics: const BouncingScrollPhysics(),
         children: [
-          Row(
-            children: [
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-            ],
+          Image.asset(
+            'assets/images/s1.png',
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-            ],
+          Image.asset(
+            'assets/images/s1.png',
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-              Expanded(
-                child: Image.asset(
-                  'assets/images/logo3.png',
-                ),
-              ),
-            ],
+          Image.asset(
+            'assets/images/s1.png',
           ),
         ],
       ),

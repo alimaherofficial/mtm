@@ -15,6 +15,7 @@ class OurWorksScreen extends StatelessWidget {
         conditionBuilder: (BuildContext context) =>
             MtmCubit.get(context).ourWorkModellist.isNotEmpty,
         widgetBuilder: (BuildContext context) => ListView.separated(
+              physics: const BouncingScrollPhysics(),
               itemBuilder: (context, index) {
                 return buildwork(
                     MtmCubit.get(context).ourWorkModellist[index], context);

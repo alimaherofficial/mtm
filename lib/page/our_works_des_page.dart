@@ -108,6 +108,10 @@ class OnTapOurWork extends StatelessWidget {
                 Center(
                   child: Image.network(
                     url,
+                     errorBuilder: (context, error, stackTrace) =>
+                            Image.asset(
+                          'assets/images/internet.png',
+                        ),
                     height: 300,
                     fit: BoxFit.contain,
                   ),

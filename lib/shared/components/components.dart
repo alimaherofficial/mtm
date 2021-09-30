@@ -31,16 +31,24 @@ Widget buildFile(
           borderRadius: const BorderRadius.all(Radius.circular(10.0)),
           child: Row(
             children: [
+              // ignore: sized_box_for_whitespace
               Container(
                 width: 120.0,
                 height: 120.0,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(1),
-                  image: DecorationImage(
-                    // image: NetworkImage(file.url),
-                    image: NetworkImage('${a.imageurl}'),
-                    fit: BoxFit.contain,
+                // decoration: BoxDecoration(
+                //   borderRadius: BorderRadius.circular(1),
+                //   image: DecorationImage(
+                //     // image: NetworkImage(file.url),
+                //     image: NetworkImage('${a.imageurl}'),
+                //     fit: BoxFit.contain,
+                //   ),
+                // ),
+                child: Image(
+                  image: NetworkImage('${a.imageurl}'),
+                  errorBuilder: (context, error, stackTrace) => Image.asset(
+                    'assets/images/internet.png',
                   ),
+                  fit: BoxFit.contain,
                 ),
               ),
               const SizedBox(width: 10),
@@ -115,6 +123,10 @@ Widget buildwork(
                   child: Column(
                     children: [
                       Image(
+                        errorBuilder: (context, error, stackTrace) =>
+                            Image.asset(
+                          'assets/images/internet.png',
+                        ),
                         image: NetworkImage('${w.imageurl1}'),
                         fit: BoxFit.contain,
                         width: double.infinity,
@@ -157,6 +169,10 @@ Widget buildwork(
                   child: Column(
                     children: [
                       Image(
+                        errorBuilder: (context, error, stackTrace) =>
+                            Image.asset(
+                          'assets/images/internet.png',
+                        ),
                         image: NetworkImage('${w.imageurl2}'),
                         fit: BoxFit.contain,
                         width: double.infinity,

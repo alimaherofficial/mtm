@@ -95,12 +95,11 @@ class OnTap extends StatelessWidget {
           overflow: TextOverflow.ellipsis,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(13.0),
-        child: ListView(
-          physics: const BouncingScrollPhysics(),
-          children: [
-            Column(
+      body: ListView(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(13.0),
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
                 Center(
@@ -139,8 +138,8 @@ class OnTap extends StatelessWidget {
                 ),
               ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

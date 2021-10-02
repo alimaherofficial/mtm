@@ -106,10 +106,9 @@ class OnTap extends StatelessWidget {
                 Center(
                   child: Image.network(
                     url,
-                     errorBuilder: (context, error, stackTrace) =>
-                            Image.asset(
-                          'assets/images/internet.png',
-                        ),
+                    errorBuilder: (context, error, stackTrace) => Image.asset(
+                      'assets/images/internet.png',
+                    ),
                     height: 300,
                     fit: BoxFit.contain,
                   ),
@@ -133,7 +132,7 @@ class OnTap extends StatelessWidget {
                 ),
                 Text(
                   '$des',
-                  style: const TextStyle(fontSize: 18),
+                  style: const TextStyle(fontSize: 16),
                   //maxLines: 9,
                   textDirection: TextDirection.rtl,
                   //   overflow: TextOverflow.ellipsis,

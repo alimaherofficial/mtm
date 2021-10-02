@@ -7,6 +7,7 @@ class AboutUsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      physics: const BouncingScrollPhysics(),
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
@@ -76,185 +77,447 @@ class AboutUsScreen extends StatelessWidget {
               const SizedBox(
                 height: 10.0,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/ahli.png',
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           Image.asset(
+              //             'assets/images/ahli.png',
+              //           ),
+              //           const Text(
+              //             'البنك الاهلى المصري',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     const SizedBox(
+              //       width: 7.0,
+              //     ),
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           Image.asset(
+              //             'assets/images/arab-contractors.png',
+              //           ),
+              //           const SizedBox(
+              //             height: 20.0,
+              //           ),
+              //           const Text(
+              //             'المقاولون العرب',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     const SizedBox(
+              //       width: 7.0,
+              //     ),
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           const SizedBox(
+              //             height: 20.0,
+              //           ),
+              //           Image.asset(
+              //             'assets/images/CPC.png',
+              //           ),
+              //           const SizedBox(
+              //             height: 38.0,
+              //           ),
+              //           const Text(
+              //             'شركة التعاون للبترول',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // const SizedBox(
+              //   height: 10.0,
+              // ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           Image.asset(
+              //             'assets/images/egyptair.png',
+              //           ),
+              //           const SizedBox(
+              //             height: 10.0,
+              //           ),
+              //           const Text(
+              //             'مصر للطيران',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     const SizedBox(
+              //       width: 7.0,
+              //     ),
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           const SizedBox(
+              //             height: 13,
+              //           ),
+              //           Image.asset(
+              //             'assets/images/Movenpick.png',
+              //           ),
+              //           const SizedBox(
+              //             height: 10.0,
+              //           ),
+              //           const Text(
+              //             'فندق موفنبيك',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     const SizedBox(
+              //       width: 7.0,
+              //     ),
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           Image.asset(
+              //             'assets/images/ramada.png',
+              //           ),
+              //           const Text(
+              //             'فندق رمادا',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //           const SizedBox(
+              //             height: 25.0,
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              // Row(
+              //   children: [
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           const SizedBox(
+              //             height: 30.0,
+              //           ),
+              //           Image.asset(
+              //             'assets/images/water.png',
+              //           ),
+              //           const SizedBox(
+              //             height: 40.0,
+              //           ),
+              //           const Text(
+              //             'الشركة القابضة لمياة الشرب و الصرف الصحي',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     const SizedBox(
+              //       width: 7.0,
+              //     ),
+              //     Expanded(
+              //       child: Column(
+              //         children: [
+              //           Image.asset(
+              //             'assets/images/we.png',
+              //           ),
+              //           const Text(
+              //             'المصرية للاتصالات',
+              //             style: TextStyle(
+              //               fontSize: 10.0,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ),
+              //     Expanded(
+              //       child: Container(),
+              //     ),
+              //   ],
+              // ),
+
+              // ignore: sized_box_for_whitespace
+              Container(
+                height: 200,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 5.0,
+                        shadowColor: Colors.black,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/we.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'المصرية للاتصالات',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'البنك الاهلى المصري',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 7.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/arab-contractors.png',
-                        ),
-                        const SizedBox(
-                          height: 20.0,
-                        ),
-                        const Text(
-                          'المقاولون العرب',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(
+                      width: 10,
                     ),
-                  ),
-                  const SizedBox(
-                    width: 7.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 20.0,
+                    Expanded(
+                      child: Material(
+                        shadowColor: Colors.black,
+                        elevation: 5.0,
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/Movenpick.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'فندق موفنبيك',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
                         ),
-                        Image.asset(
-                          'assets/images/CPC.png',
-                        ),
-                        const SizedBox(
-                          height: 38.0,
-                        ),
-                        const Text(
-                          'شركة التعاون للبترول',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               const SizedBox(
-                height: 10.0,
+                height: 10,
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/egyptair.png',
+              // ignore: sized_box_for_whitespace
+              Container(
+                height: 200,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 5.0,
+                        shadowColor: Colors.black,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/ahli.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'البنك الأهلى المصرى',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
                         ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
-                        const Text(
-                          'مصر للطيران',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 7.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 13,
-                        ),
-                        Image.asset(
-                          'assets/images/Movenpick.png',
-                        ),
-                        const SizedBox(
-                          height: 10.0,
-                        ),
-                        const Text(
-                          'فندق موفنبيك',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(
+                      width: 10,
                     ),
-                  ),
-                  const SizedBox(
-                    width: 7.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/ramada.png',
+                    Expanded(
+                      child: Material(
+                        shadowColor: Colors.black,
+                        elevation: 5.0,
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/ramada.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'فندق رمادا',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
                         ),
-                        const Text(
-                          'فندق رمادا',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 25.0,
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-              Row(
-                children: [
-                  Expanded(
-                    child: Column(
-                      children: [
-                        const SizedBox(
-                          height: 30.0,
+              const SizedBox(
+                height: 10,
+              ),
+              // ignore: sized_box_for_whitespace
+              Container(
+                height: 200,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 5.0,
+                        shadowColor: Colors.black,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/water.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'الشركة القابضة لمياة الشرب و الصرف الصحي',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
                         ),
-                        Image.asset(
-                          'assets/images/water.png',
-                        ),
-                        const SizedBox(
-                          height: 40.0,
-                        ),
-                        const Text(
-                          'الشركة القابضة لمياة الشرب و الصرف الصحي',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
-                  ),
-                  const SizedBox(
-                    width: 7.0,
-                  ),
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/we.png',
-                        ),
-                        const Text(
-                          'المصرية للاتصالات',
-                          style: TextStyle(
-                            fontSize: 10.0,
-                          ),
-                        ),
-                      ],
+                    const SizedBox(
+                      width: 10,
                     ),
-                  ),
-                  Expanded(
-                    child: Container(),
-                  ),
-                ],
+                    Expanded(
+                      child: Material(
+                        shadowColor: Colors.black,
+                        elevation: 5.0,
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/egyptair.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'مطار الغردقة الدولى',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              // ignore: sized_box_for_whitespace
+              Container(
+                height: 200,
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Material(
+                        color: Colors.white,
+                        elevation: 5.0,
+                        shadowColor: Colors.black,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/CPC.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'التعاون للبترول',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Expanded(
+                      child: Material(
+                        shadowColor: Colors.black,
+                        elevation: 5.0,
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              'assets/images/arab-contractors.png',
+                              fit: BoxFit.contain,
+                              width: double.infinity,
+                              height: 140.0,
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text(
+                                'المقاولون العرب',
+                                overflow: TextOverflow.ellipsis,
+                                maxLines: 1,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
